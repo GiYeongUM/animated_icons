@@ -1,4 +1,4 @@
-# animated_icons
+# icon_animated
 Flutter animated icons
 
 [![Flutter](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)

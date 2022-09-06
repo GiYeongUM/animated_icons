@@ -1,3 +1,16 @@
-## 0.0.1
+## 0.1.0
 
-* TODO: Describe initial release.
+* initial package
+
+[Icon list]
+- check
+- fail
+- alert
+- trendingUp
+- trendingDown
+- search
+- message
+- plus
+- download
+- menu
+- bluetooth

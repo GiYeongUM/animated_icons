@@ -1,4 +1,4 @@
-# animated_icons
+# icon_animated
 Flutter animated icons
 
 [![Flutter](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)
@@ -71,3 +71,9 @@ _showIcon()
 /// do this
 /// _animationController.reverse();
 ```
+
+## 📋Notice
+
+This package can be used for commercial purposes. 
+We're going to add a new icon every update. 
+If you need any icons, send png or svg icon to **eomky2005@gmail.com** via email or **Git Issue**.

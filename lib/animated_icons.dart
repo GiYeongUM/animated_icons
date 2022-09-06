@@ -1,4 +1,4 @@
-library animated_icons;
+library icon_animated;
 
 
 export './widgets/icon_animated.dart';

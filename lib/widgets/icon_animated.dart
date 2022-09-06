@@ -89,21 +89,20 @@ class IconAnimatedState extends State<IconAnimated>
             ));
       case IconType.search:
         return CustomPaint(
-          foregroundPainter: AnimateSearchPathPainter(widget.progress,
-              widget.color ?? theme.primaryColor, widget.strokeWidth),
-          child: SizedBox(
-            width: widget.size,
-            height: widget.size,
-          ));
-      case IconType.message:
-        return CustomPaint(
-          foregroundPainter: AnimateMessagePathPainter(widget.progress,
-              widget.color ?? theme.primaryColor, widget.strokeWidth),
+            foregroundPainter: AnimateSearchPathPainter(widget.progress,
+                widget.color ?? theme.primaryColor, widget.strokeWidth),
             child: SizedBox(
               width: widget.size,
               height: widget.size,
-            )
-        );
+            ));
+      case IconType.message:
+        return CustomPaint(
+            foregroundPainter: AnimateMessagePathPainter(widget.progress,
+                widget.color ?? theme.primaryColor, widget.strokeWidth),
+            child: SizedBox(
+              width: widget.size,
+              height: widget.size,
+            ));
       case IconType.plus:
         return CustomPaint(
             foregroundPainter: AnimatePlusPathPainter(widget.progress,
@@ -111,8 +110,7 @@ class IconAnimatedState extends State<IconAnimated>
             child: SizedBox(
               width: widget.size,
               height: widget.size,
-            )
-        );
+            ));
       case IconType.download:
         return CustomPaint(
             foregroundPainter: AnimateDownloadPathPainter(widget.progress,
@@ -120,8 +118,7 @@ class IconAnimatedState extends State<IconAnimated>
             child: SizedBox(
               width: widget.size,
               height: widget.size,
-            )
-        );
+            ));
       case IconType.menu:
         return CustomPaint(
             foregroundPainter: AnimateMenuPathPainter(widget.progress,
@@ -129,8 +126,7 @@ class IconAnimatedState extends State<IconAnimated>
             child: SizedBox(
               width: widget.size,
               height: widget.size,
-            )
-        );
+            ));
       case IconType.bluetooth:
         return CustomPaint(
             foregroundPainter: AnimateBluetoothPathPainter(widget.progress,
@@ -138,8 +134,7 @@ class IconAnimatedState extends State<IconAnimated>
             child: SizedBox(
               width: widget.size,
               height: widget.size,
-            )
-        );
+            ));
     }
   }
 }
@@ -385,7 +380,6 @@ class AnimateTrendingUpPathPainter extends CustomPainter {
 
   Path _createAnyPath(Size size) {
     return Path()
-
       ..moveTo(0.28 * size.width, 0.62 * size.height)
       ..lineTo(0.43 * size.width, 0.47 * size.height)
       ..lineTo(0.53 * size.width, 0.57 * size.height)
@@ -474,7 +468,6 @@ class AnimateTrendingDownPathPainter extends CustomPainter {
       ..lineTo(0.585 * size.width, 0.615 * size.height)
       ..moveTo(0.715 * size.width, 0.635 * size.height)
       ..lineTo(0.715 * size.width, 0.475 * size.height);
-
   }
 
   Path createAnimatedPath(Path originalPath, double animationPercent) {
@@ -626,23 +619,36 @@ class AnimateMessagePathPainter extends CustomPainter {
   Path _createAnyPath(Size size) {
     return Path()
       ..moveTo(0.68 * size.width, 0.50 * size.height)
-      ..quadraticBezierTo(0.68 * size.width, 0.50 * size.height, 0.67 * size.width, 0.475 * size.height)
-      ..quadraticBezierTo(0.67 * size.width, 0.475 * size.height, 0.65 * size.width, 0.46 * size.height)
+      ..quadraticBezierTo(0.68 * size.width, 0.50 * size.height,
+          0.67 * size.width, 0.475 * size.height)
+      ..quadraticBezierTo(0.67 * size.width, 0.475 * size.height,
+          0.65 * size.width, 0.46 * size.height)
       ..lineTo(0.39 * size.width, 0.33 * size.height)
-      ..quadraticBezierTo(0.39 * size.width, 0.33 * size.height, 0.36 * size.width, 0.32 * size.height)
-      ..quadraticBezierTo(0.36 * size.width, 0.32 * size.height, 0.33 * size.width, 0.33 * size.height)
-      ..quadraticBezierTo(0.33 * size.width, 0.33 * size.height, 0.32 * size.width, 0.35 * size.height)
-      ..quadraticBezierTo(0.32 * size.width, 0.35 * size.height, 0.32 * size.width, 0.37 * size.height)
+      ..quadraticBezierTo(0.39 * size.width, 0.33 * size.height,
+          0.36 * size.width, 0.32 * size.height)
+      ..quadraticBezierTo(0.36 * size.width, 0.32 * size.height,
+          0.33 * size.width, 0.33 * size.height)
+      ..quadraticBezierTo(0.33 * size.width, 0.33 * size.height,
+          0.32 * size.width, 0.35 * size.height)
+      ..quadraticBezierTo(0.32 * size.width, 0.35 * size.height,
+          0.32 * size.width, 0.37 * size.height)
       ..lineTo(0.375 * size.width, 0.50 * size.height)
       ..lineTo(0.32 * size.width, 0.625 * size.height)
-      ..quadraticBezierTo(0.32 * size.width, 0.625 * size.height, 0.32 * size.width, 0.645 * size.height)
-      ..quadraticBezierTo(0.32 * size.width, 0.645 * size.height, 0.33 * size.width, 0.665 * size.height)
-      ..quadraticBezierTo(0.33 * size.width, 0.665 * size.height, 0.36 * size.width, 0.675 * size.height)
-      ..quadraticBezierTo(0.36 * size.width, 0.675 * size.height, 0.39 * size.width, 0.665 * size.height)
+      ..quadraticBezierTo(0.32 * size.width, 0.625 * size.height,
+          0.32 * size.width, 0.645 * size.height)
+      ..quadraticBezierTo(0.32 * size.width, 0.645 * size.height,
+          0.33 * size.width, 0.665 * size.height)
+      ..quadraticBezierTo(0.33 * size.width, 0.665 * size.height,
+          0.36 * size.width, 0.675 * size.height)
+      ..quadraticBezierTo(0.36 * size.width, 0.675 * size.height,
+          0.39 * size.width, 0.665 * size.height)
       ..lineTo(0.65 * size.width, 0.535 * size.height)
-      ..quadraticBezierTo(0.65 * size.width, 0.535 * size.height, 0.67 * size.width, 0.52 * size.height)
-      ..quadraticBezierTo(0.67 * size.width, 0.52 * size.height, 0.68 * size.width, 0.50 * size.height)
-      ..quadraticBezierTo(0.68 * size.width, 0.50 * size.height, 0.675 * size.width, 0.49 * size.height)
+      ..quadraticBezierTo(0.65 * size.width, 0.535 * size.height,
+          0.67 * size.width, 0.52 * size.height)
+      ..quadraticBezierTo(0.67 * size.width, 0.52 * size.height,
+          0.68 * size.width, 0.50 * size.height)
+      ..quadraticBezierTo(0.68 * size.width, 0.50 * size.height,
+          0.675 * size.width, 0.49 * size.height)
       ..moveTo(0.38 * size.width, 0.50 * size.height)
       ..lineTo(0.52 * size.width, 0.50 * size.height);
   }
@@ -795,39 +801,57 @@ class AnimateDownloadPathPainter extends CustomPainter {
     return Path()
       ..moveTo(0.42 * size.width, 0.46 * size.height)
       ..lineTo(0.37 * size.width, 0.46 * size.height)
-      ..quadraticBezierTo(0.37 * size.width, 0.46 * size.height, 0.36 * size.width, 0.465 * size.height)
-      ..quadraticBezierTo(0.36 * size.width, 0.465 * size.height, 0.35 * size.width, 0.47 * size.height)
-      ..quadraticBezierTo(0.35 * size.width, 0.47 * size.height, 0.345 * size.width, 0.48 * size.height)
-      ..quadraticBezierTo(0.345 * size.width, 0.48 * size.height, 0.34 * size.width, 0.49 * size.height)
+      ..quadraticBezierTo(0.37 * size.width, 0.46 * size.height,
+          0.36 * size.width, 0.465 * size.height)
+      ..quadraticBezierTo(0.36 * size.width, 0.465 * size.height,
+          0.35 * size.width, 0.47 * size.height)
+      ..quadraticBezierTo(0.35 * size.width, 0.47 * size.height,
+          0.345 * size.width, 0.48 * size.height)
+      ..quadraticBezierTo(0.345 * size.width, 0.48 * size.height,
+          0.34 * size.width, 0.49 * size.height)
       ..lineTo(0.34 * size.width, 0.65 * size.height)
-      ..quadraticBezierTo(0.34 * size.width, 0.65 * size.height, 0.345 * size.width, 0.66 * size.height)
-      ..quadraticBezierTo(0.345 * size.width, 0.66 * size.height, 0.35 * size.width, 0.67 * size.height)
-      ..quadraticBezierTo(0.35 * size.width, 0.67 * size.height, 0.36 * size.width, 0.675 * size.height)
-      ..quadraticBezierTo(0.36 * size.width, 0.675 * size.height, 0.37 * size.width, 0.68 * size.height)
+      ..quadraticBezierTo(0.34 * size.width, 0.65 * size.height,
+          0.345 * size.width, 0.66 * size.height)
+      ..quadraticBezierTo(0.345 * size.width, 0.66 * size.height,
+          0.35 * size.width, 0.67 * size.height)
+      ..quadraticBezierTo(0.35 * size.width, 0.67 * size.height,
+          0.36 * size.width, 0.675 * size.height)
+      ..quadraticBezierTo(0.36 * size.width, 0.675 * size.height,
+          0.37 * size.width, 0.68 * size.height)
       ..lineTo(0.63 * size.width, 0.68 * size.height)
-      ..quadraticBezierTo(0.63 * size.width, 0.68 * size.height, 0.64 * size.width, 0.675 * size.height)
-      ..quadraticBezierTo(0.64 * size.width, 0.675 * size.height, 0.65 * size.width, 0.67 * size.height)
-      ..quadraticBezierTo(0.65 * size.width, 0.67 * size.height, 0.655 * size.width, 0.66 * size.height)
-      ..quadraticBezierTo(0.655 * size.width, 0.66 * size.height, 0.66 * size.width, 0.65 * size.height)
+      ..quadraticBezierTo(0.63 * size.width, 0.68 * size.height,
+          0.64 * size.width, 0.675 * size.height)
+      ..quadraticBezierTo(0.64 * size.width, 0.675 * size.height,
+          0.65 * size.width, 0.67 * size.height)
+      ..quadraticBezierTo(0.65 * size.width, 0.67 * size.height,
+          0.655 * size.width, 0.66 * size.height)
+      ..quadraticBezierTo(0.655 * size.width, 0.66 * size.height,
+          0.66 * size.width, 0.65 * size.height)
       ..lineTo(0.66 * size.width, 0.49 * size.height)
-      ..quadraticBezierTo(0.66 * size.width, 0.65 * size.height, 0.655 * size.width, 0.48 * size.height)
-      ..quadraticBezierTo(0.655 * size.width, 0.48 * size.height, 0.65 * size.width, 0.47 * size.height)
-      ..quadraticBezierTo(0.65 * size.width, 0.47 * size.height, 0.64 * size.width, 0.465 * size.height)
-      ..quadraticBezierTo(0.64 * size.width, 0.465 * size.height, 0.63 * size.width, 0.46 * size.height)
+      ..quadraticBezierTo(0.66 * size.width, 0.65 * size.height,
+          0.655 * size.width, 0.48 * size.height)
+      ..quadraticBezierTo(0.655 * size.width, 0.48 * size.height,
+          0.65 * size.width, 0.47 * size.height)
+      ..quadraticBezierTo(0.65 * size.width, 0.47 * size.height,
+          0.64 * size.width, 0.465 * size.height)
+      ..quadraticBezierTo(0.64 * size.width, 0.465 * size.height,
+          0.63 * size.width, 0.46 * size.height)
       ..lineTo(0.58 * size.width, 0.46 * size.height)
       ..moveTo(0.50 * size.width, 0.32 * size.height)
       ..lineTo(0.50 * size.width, 0.60 * size.height)
       ..moveTo(0.42 * size.width, 0.54 * size.height)
-      ..quadraticBezierTo(0.42 * size.width, 0.54 * size.height, 0.50 * size.width, 0.60 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.60 * size.height, 0.58 * size.width, 0.54 * size.height);
-      // ..moveTo(0.50 * size.width, 0.58 * size.height)
-      // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.49 * size.width, 0.59 * size.height)
-      // ..quadraticBezierTo(0.49 * size.width, 0.59 * size.height, 0.48 * size.width, 0.58 * size.height)
-      // ..lineTo(0.42 * size.width, 0.54 * size.height)
-      // ..moveTo(0.50 * size.width, 0.58 * size.height)
-      // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.51 * size.width, 0.59 * size.height)
-      // ..quadraticBezierTo(0.51 * size.width, 0.59 * size.height, 0.52 * size.width, 0.58 * size.height)
-      // ..lineTo(0.58 * size.width, 0.54 * size.height);
+      ..quadraticBezierTo(0.42 * size.width, 0.54 * size.height,
+          0.50 * size.width, 0.60 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.60 * size.height,
+          0.58 * size.width, 0.54 * size.height);
+    // ..moveTo(0.50 * size.width, 0.58 * size.height)
+    // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.49 * size.width, 0.59 * size.height)
+    // ..quadraticBezierTo(0.49 * size.width, 0.59 * size.height, 0.48 * size.width, 0.58 * size.height)
+    // ..lineTo(0.42 * size.width, 0.54 * size.height)
+    // ..moveTo(0.50 * size.width, 0.58 * size.height)
+    // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.51 * size.width, 0.59 * size.height)
+    // ..quadraticBezierTo(0.51 * size.width, 0.59 * size.height, 0.52 * size.width, 0.58 * size.height)
+    // ..lineTo(0.58 * size.width, 0.54 * size.height);
   }
 
   Path createAnimatedPath(Path originalPath, double animationPercent) {
@@ -906,7 +930,6 @@ class AnimateMenuPathPainter extends CustomPainter {
       ..lineTo(0.68 * size.width, 0.50 * size.height)
       ..moveTo(0.32 * size.width, 0.62 * size.height)
       ..lineTo(0.68 * size.width, 0.62 * size.height);
-
   }
 
   Path createAnimatedPath(Path originalPath, double animationPercent) {
@@ -981,23 +1004,34 @@ class AnimateBluetoothPathPainter extends CustomPainter {
     return Path()
       ..moveTo(0.39 * size.width, 0.61 * size.height)
       ..lineTo(0.60 * size.width, 0.40 * size.height)
-      ..quadraticBezierTo(0.60 * size.width, 0.40 * size.height, 0.61 * size.width, 0.39 * size.height)
-      ..quadraticBezierTo(0.61 * size.width, 0.39 * size.height, 0.60 * size.width, 0.38 * size.height)
+      ..quadraticBezierTo(0.60 * size.width, 0.40 * size.height,
+          0.61 * size.width, 0.39 * size.height)
+      ..quadraticBezierTo(0.61 * size.width, 0.39 * size.height,
+          0.60 * size.width, 0.38 * size.height)
       ..lineTo(0.52 * size.width, 0.30 * size.height)
-      ..quadraticBezierTo(0.52 * size.width, 0.30 * size.height, 0.51 * size.width, 0.29 * size.height)
-      ..quadraticBezierTo(0.51 * size.width, 0.29 * size.height, 0.50 * size.width, 0.28 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.28 * size.height, 0.50 * size.width, 0.29 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.29 * size.height, 0.50 * size.width, 0.30 * size.height)
+      ..quadraticBezierTo(0.52 * size.width, 0.30 * size.height,
+          0.51 * size.width, 0.29 * size.height)
+      ..quadraticBezierTo(0.51 * size.width, 0.29 * size.height,
+          0.50 * size.width, 0.28 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.28 * size.height,
+          0.50 * size.width, 0.29 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.29 * size.height,
+          0.50 * size.width, 0.30 * size.height)
       ..lineTo(0.50 * size.width, 0.70 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.70 * size.height, 0.50 * size.width, 0.71 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.71 * size.height, 0.50 * size.width, 0.72 * size.height)
-      ..quadraticBezierTo(0.50 * size.width, 0.72 * size.height, 0.51 * size.width, 0.71 * size.height)
-      ..quadraticBezierTo(0.51 * size.width, 0.71 * size.height, 0.52 * size.width, 0.70 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.70 * size.height,
+          0.50 * size.width, 0.71 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.71 * size.height,
+          0.50 * size.width, 0.72 * size.height)
+      ..quadraticBezierTo(0.50 * size.width, 0.72 * size.height,
+          0.51 * size.width, 0.71 * size.height)
+      ..quadraticBezierTo(0.51 * size.width, 0.71 * size.height,
+          0.52 * size.width, 0.70 * size.height)
       ..lineTo(0.60 * size.width, 0.62 * size.height)
-      ..quadraticBezierTo(0.60 * size.width, 0.62 * size.height, 0.61 * size.width, 0.61 * size.height)
-      ..quadraticBezierTo(0.61 * size.width, 0.61 * size.height, 0.60 * size.width, 0.60 * size.height)
+      ..quadraticBezierTo(0.60 * size.width, 0.62 * size.height,
+          0.61 * size.width, 0.61 * size.height)
+      ..quadraticBezierTo(0.61 * size.width, 0.61 * size.height,
+          0.60 * size.width, 0.60 * size.height)
       ..lineTo(0.39 * size.width, 0.39 * size.height);
-
   }
 
   Path createAnimatedPath(Path originalPath, double animationPercent) {

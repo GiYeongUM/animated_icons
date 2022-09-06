@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icon_animated/widgets/icon_animated.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -33,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
-  late  bool isOn;
+  late bool isOn;
 
   @override
   void initState() {
@@ -69,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage>
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: InkWell(
-          onTap: (){
+          onTap: () {
             isOn ? _reverseIcon() : _showIcon();
           },
           child: GridView.count(
@@ -78,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage>
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
             crossAxisCount: 3,
-            children:  <Widget>[
+            children: <Widget>[
               Container(
                 color: Colors.black.withOpacity(0.03),
                 child: IconAnimated(

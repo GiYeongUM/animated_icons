@@ -844,14 +844,6 @@ class AnimateDownloadPathPainter extends CustomPainter {
           0.50 * size.width, 0.60 * size.height)
       ..quadraticBezierTo(0.50 * size.width, 0.60 * size.height,
           0.58 * size.width, 0.54 * size.height);
-    // ..moveTo(0.50 * size.width, 0.58 * size.height)
-    // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.49 * size.width, 0.59 * size.height)
-    // ..quadraticBezierTo(0.49 * size.width, 0.59 * size.height, 0.48 * size.width, 0.58 * size.height)
-    // ..lineTo(0.42 * size.width, 0.54 * size.height)
-    // ..moveTo(0.50 * size.width, 0.58 * size.height)
-    // ..quadraticBezierTo(0.50 * size.width, 0.58 * size.height, 0.51 * size.width, 0.59 * size.height)
-    // ..quadraticBezierTo(0.51 * size.width, 0.59 * size.height, 0.52 * size.width, 0.58 * size.height)
-    // ..lineTo(0.58 * size.width, 0.54 * size.height);
   }
 
   Path createAnimatedPath(Path originalPath, double animationPercent) {

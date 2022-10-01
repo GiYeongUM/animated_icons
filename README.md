@@ -72,7 +72,7 @@ _showIcon()
 /// _animationController.reverse();
 ```
 
-## 📋Notice
+## 📋 Notice
 
 This package can be used for commercial purposes. 
 We're going to add a new icon every update. 

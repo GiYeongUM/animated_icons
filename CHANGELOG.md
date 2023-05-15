@@ -1,3 +1,7 @@
+## 1.0.0
+* publish major version
+* change alert icon
+
 ## 0.1.0+1
 
 * clean code

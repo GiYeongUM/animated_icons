@@ -49,8 +49,7 @@ class IconAnimatedState extends State<IconAnimated>
     switch (widget.iconType) {
       case IconType.check:
         return CustomPaint(
-            foregroundPainter: AnimatedCheckPathPainter(widget.progress,
-                widget.color ?? theme.primaryColor, widget.strokeWidth),
+            foregroundPainter: AnimatedCheckPathPainter(widget.progress, widget.color ?? theme.primaryColor, widget.strokeWidth),
             child: SizedBox(
               width: widget.size,
               height: widget.size,
@@ -305,8 +304,8 @@ class AnimatedAlertPathPainter extends CustomPainter {
         radius: (size.width + size.height) / 7.5,
       ))
       ..moveTo(0.5 * size.width, 0.34 * size.height)
-      ..lineTo(0.5 * size.width, 0.55 * size.height)
-      ..moveTo(0.5 * size.width, 0.61 * size.height)
+      ..lineTo(0.5 * size.width, 0.39 * size.height)
+      ..moveTo(0.5 * size.width, 0.45 * size.height)
       ..lineTo(0.5 * size.width, 0.66 * size.height);
   }
 

@@ -108,6 +108,15 @@ class _MyHomePageState extends State<MyHomePage>
               Container(
                 color: Colors.black.withOpacity(0.03),
                 child: IconAnimated(
+                  color: Colors.red,
+                  progress: _animation,
+                  size: 100,
+                  iconType: IconType.error,
+                ),
+              ),
+              Container(
+                color: Colors.black.withOpacity(0.03),
+                child: IconAnimated(
                   color: Colors.green,
                   progress: _animation,
                   size: 100,

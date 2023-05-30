@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:icon_animated/widgets/icon_animated.dart';
+import 'package:icon_animated/icon_animated.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,116 +77,17 @@ class _MyHomePageState extends State<MyHomePage>
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
             crossAxisCount: 3,
-            children: <Widget>[
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.green,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.check,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.red,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.fail,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
+            children: IconType.values.asMap().entries.map((iconType) => Container(
+              color: Colors.black.withOpacity(0.05),
+              child: Center(
                 child: IconAnimated(
                   color: Colors.black,
                   progress: _animation,
                   size: 100,
-                  iconType: IconType.alert,
+                  iconType: iconType.value,
                 ),
               ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.red,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.error,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.green,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.trendingUp,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.red,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.trendingDown,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.black,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.search,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.blue,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.download,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.blue,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.message,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.black,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.plus,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.blue,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.bluetooth,
-                ),
-              ),
-              Container(
-                color: Colors.black.withOpacity(0.03),
-                child: IconAnimated(
-                  color: Colors.black,
-                  progress: _animation,
-                  size: 100,
-                  iconType: IconType.menu,
-                ),
-              ),
-            ],
+            ),).toList(),
           ),
         ),
       ),

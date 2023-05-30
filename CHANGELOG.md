@@ -1,3 +1,7 @@
+## 1.1.0
+* add sort icon
+* add filter icon
+
 ## 1.0.1
 * add error icon
 * clean code

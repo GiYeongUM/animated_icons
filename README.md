@@ -12,10 +12,12 @@ Flutter animated icons
 - trendingDown
 - search
 - message
-- plus
+- add
 - download
-- menu
 - bluetooth
+- menu
+- sort
+- filter
 
 ## ⚡ [Installation](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
 

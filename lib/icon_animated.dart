@@ -22,33 +22,39 @@ enum IconType {
 }
 
 class IconAnimated extends StatefulWidget {
-  final Animation<double> progress;
+  final bool active;
   final double size;
   final Color? color;
   final double? strokeWidth;
   final IconType iconType;
 
-  const IconAnimated({Key? key, required this.progress, required this.size, this.color, this.strokeWidth, required this.iconType}) : super(key: key);
+  const IconAnimated({Key? key, required this.active, required this.size, this.color, this.strokeWidth, required this.iconType}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => IconAnimatedState();
 }
 
 class IconAnimatedState extends State<IconAnimated> with SingleTickerProviderStateMixin {
+
+  late AnimationController _animationController;
+  late Animation<double> _animation;
+
   @override
   void initState() {
+    _animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 700));
+    _animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOutCirc));
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    widget.active ? _animationController.forward() : _animationController.reverse();
     final Size size = Size(widget.size, widget.size);
     return CustomPaint(
         size: Size(widget.size, widget.size),
         painter: AnimatedPathPainter(
-          widget.progress,
+          _animation,
           widget.color ?? theme.primaryColor,
           widget.strokeWidth,
           widget.iconType,

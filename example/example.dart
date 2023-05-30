@@ -15,61 +15,41 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Widget Demo Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-  late Animation<double> _animation;
-  late bool isOn;
+class _MyHomePageState extends State<MyHomePage> {
+
+  bool active = true;
 
   @override
   void initState() {
-    _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 700));
-    _animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
-        parent: _animationController, curve: Curves.easeInOutCirc));
-    isOn = false;
-    _showIcon();
+    active = true;
     super.initState();
-  }
-
-  void _showIcon() {
-    _animationController.forward();
-    setState(() {
-      isOn = true;
-    });
-  }
-
-  void _reverseIcon() {
-    _animationController.reverse();
-    setState(() {
-      isOn = false;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Demo'),
       ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: InkWell(
           onTap: () {
-            isOn ? _reverseIcon() : _showIcon();
+            setState(() {
+              active = !active;
+            });
           },
           child: GridView.count(
             primary: false,
@@ -82,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage>
               child: Center(
                 child: IconAnimated(
                   color: Colors.black,
-                  progress: _animation,
+                  active: active,
                   size: 100,
                   iconType: iconType.value,
                 ),

@@ -34,44 +34,21 @@ dependencies:
 
 ## 💪 Use
 
-1. Set animation
-``` dart
-class _FooClassState extends State<FooClass> with SingleTickerProviderStateMixin {
-
-  late AnimationController _animationController;
-  late Animation<double> _animation;
-
-  @override
-  void initState()  {
-    _animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 700));
-    _animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOutCirc));
-    super.initState();
-  }
-
-  void _showIcon() {
-    _animationController.forward();
-  }
-  
-  ...
-```
-
-2. add widget
+1. add widget
 ``` dart
 IconAnimated(
   color: Colors.green,
-  progress: _animation,
+  active: isActive, // boolean
   size: 100,
   iconType: IconType.check,
 ),
 ```
 
-3. trigger widget animation
+2. just trigger widget
 ``` dart
-_showIcon()
-
-/// If you want to do the reverse
-/// do this
-/// _animationController.reverse();
+setState(() {
+  isActive = !isActive;
+});
 ```
 
 ## 📋 Notice

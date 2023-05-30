@@ -1,3 +1,6 @@
+## 1.2.0
+* animation logic has been inline
+
 ## 1.1.0
 * add sort icon
 * add filter icon

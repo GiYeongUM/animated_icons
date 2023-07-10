@@ -2,7 +2,7 @@ name: icon_animated
 description: Awesome flutter icons. Animated icons! using it very easily.
 homepage: https://github.com/GiYeongUM
 repository: https://github.com/GiYeongUM/animated_icons
-version: 1.2.0
+version: 1.2.1
 
 environment:
   sdk: ">=2.17.3 <4.0.0"

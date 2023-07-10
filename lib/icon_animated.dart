@@ -63,6 +63,12 @@ class IconAnimatedState extends State<IconAnimated> with SingleTickerProviderSta
 
     );
   }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 }
 
 class AnimatedPathPainter extends CustomPainter {

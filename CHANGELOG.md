@@ -1,3 +1,6 @@
+## 1.2.1
+* add dispose
+
 ## 1.2.0
 * animation logic has been inline
 

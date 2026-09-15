@@ -6,29 +6,26 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Widget Demo Page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   bool active = true;
 
   @override
@@ -40,9 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Demo'),
-      ),
+      appBar: AppBar(title: const Text('Demo')),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: InkWell(
@@ -57,17 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
             crossAxisCount: 3,
-            children: IconType.values.asMap().entries.map((iconType) => Container(
-              color: Colors.black.withOpacity(0.05),
-              child: Center(
-                child: IconAnimated(
-                  color: Colors.black,
-                  active: active,
-                  size: 100,
-                  iconType: iconType.value,
-                ),
-              ),
-            ),).toList(),
+            children: IconType.values
+                .asMap()
+                .entries
+                .map(
+                  (iconType) => Container(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    child: Center(
+                      child: IconAnimated(
+                        color: Colors.black,
+                        active: active,
+                        size: 100,
+                        iconType: iconType.value,
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
           ),
         ),
       ),

@@ -1,58 +1,59 @@
 # icon_animated
-Flutter animated icons
 
-[![Flutter](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)
+Animated outline icons for Flutter. Toggle `active` to draw or reverse an icon.
 
-## 📋 Icon lists
+## Installation
 
-- check
-- fail
-- alert
-- trendingUp
-- trendingDown
-- search
-- message
-- add
-- download
-- bluetooth
-- menu
-- sort
-- filter
+Requires Flutter 3.32+ and Dart 3.8+.
+The pub.dev package name is **icon_animated**.
 
-## ⚡ [Installation](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
-
-
-```yaml
-dependencies:
-  animated_icons: ^<latest_version>
+```sh
+flutter pub add icon_animated
 ```
 
-## 📷 GIF
+## Usage
 
-<img width="308" alt="" src="https://github.com/GiYeongUM/animated_icons/raw/main/images/custom_animated_icons.gif">
+```dart
+import 'package:flutter/material.dart';
+import 'package:icon_animated/icon_animated.dart';
 
-
-## 💪 Use
-
-1. add widget
-``` dart
 IconAnimated(
+  active: isActive,
+  size: 48,
   color: Colors.green,
-  active: isActive, // boolean
-  size: 100,
+  strokeWidth: 2,
   iconType: IconType.check,
-),
+)
 ```
 
-2. just trigger widget
-``` dart
-setState(() {
-  isActive = !isActive;
-});
+Update `isActive` with `setState` or your preferred state management.
+The forward and reverse transitions take 700 milliseconds.
+The default stroke width is 4% of the icon size.
+
+Supported icons: check, fail, alert, error, trendingUp, trendingDown, search,
+message, add, download, menu, sort, bluetooth, and filter.
+
+Wrap meaningful icons in a Semantics widget with an appropriate label.
+
+![Animated icons](https://github.com/GiYeongUM/animated_icons/raw/main/images/custom_animated_icons.gif)
+
+## Development
+
+```sh
+flutter pub get
+dart format --output=none --set-exit-if-changed lib example test
+flutter analyze --fatal-infos
+flutter test
+flutter pub publish --dry-run
 ```
 
-## 📋 Notice
+CI checks the minimum supported Flutter version and the latest stable channel.
 
-This package can be used for commercial purposes. 
-We're going to add a new icon every update. 
-If you need any icons, send png or svg icon to **eomky2005@gmail.com** via email or **Git Issue**.
+## Migration
+
+This release requires Dart 3.8 and Flutter 3.32 or newer. Existing constructor
+and method arguments remain supported. See [CHANGELOG.md](CHANGELOG.md) for fixes.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

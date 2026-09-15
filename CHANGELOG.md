@@ -1,3 +1,10 @@
+## 1.3.0
+
+- Require Dart 3.8 and Flutter 3.32 or newer; adopt flutter_lints 6.
+- Move animation control out of build and dispose animation listeners.
+- Avoid unnecessary repaints and stop path extraction at the requested length.
+- Replace the placeholder test with animation and path regression tests.
+
 ## 1.2.1
 * add dispose
 

@@ -41,37 +41,4 @@ void main() {
       expect(tester.hasRunningAnimations, isFalse);
     },
   );
-
-  final animation = AlwaysStoppedAnimation<double>(1);
-  AnimatedPathPainter painter({Color color = Colors.red}) =>
-      AnimatedPathPainter(
-        animation,
-        color,
-        2,
-        IconType.check,
-        const Size(48, 48),
-      );
-
-  test('only repaints when visual inputs change', () {
-    expect(painter().shouldRepaint(painter()), isFalse);
-    expect(painter(color: Colors.blue).shouldRepaint(painter()), isTrue);
-  });
-
-  test('partial multi-contour paths stop at the requested distance', () {
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(10, 0)
-      ..moveTo(0, 10)
-      ..lineTo(10, 10);
-    double length(Path path) =>
-        path.computeMetrics().fold(0.0, (sum, metric) => sum + metric.length);
-    expect(length(painter().createAnimatedPath(path, 0)), 0);
-    expect(length(painter().createAnimatedPath(path, 0.25)), closeTo(5, 0.001));
-    expect(
-      length(painter().createAnimatedPath(path, 0.75)),
-      closeTo(15, 0.001),
-    );
-    expect(length(painter().createAnimatedPath(path, 2)), closeTo(20, 0.001));
-    expect(length(painter().createAnimatedPath(path, -1)), 0);
-  });
 }

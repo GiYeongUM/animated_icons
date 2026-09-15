@@ -39,11 +39,17 @@ IconAnimated(
   active: isSaved,
   size: 48,
   iconType: IconType.check,
+  duration: const Duration(milliseconds: 400),
   semanticLabel: 'Saved',
 )
 ```
 
 Here, `isSaved` is a boolean from your application state.
+
+The `duration` parameter is available from **2.0.0** and controls both drawing and
+reversal. It defaults to 700 ms. Use `Duration.zero` for an immediate state change;
+system reduced-motion settings also skip the animation. You can update the duration on
+rebuild without recreating the widget.
 
 ## Configuration
 
